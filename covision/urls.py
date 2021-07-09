@@ -27,3 +27,4 @@ urlpatterns = [
     path('fake_news', fake_news_view, name='fakenews'),
     path('chatbot', chatbot_view, name='chatbot'),
 ]
+
