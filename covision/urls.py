@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
+from base.views import home_view,predict_view,sentiment_view,summary_view,fake_news_view,chatbot_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_view, name='home'),
+    path('predict', predict_view, name='predict'),
+    path('sentiment', sentiment_view, name='sentiment'),
+    path('summary', summary_view, name='summary'),
+    path('fake_news', fake_news_view, name='fakenews'),
+    path('chatbot', chatbot_view, name='chatbot'),
 ]
