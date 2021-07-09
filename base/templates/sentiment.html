@@ -1,4 +1,51 @@
 {% extends "base.html" %}
 {% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<h2>COVID 19 Sentiment Analyzer</h2>
+<div class="text-left">
+    <form id="sentiment" method="POST" action="{% url 'sentiment' %}">
+        <input type="submit" class="btn btn-primary" value="Perform Sentiment Analysis">
+    </form>
+</div>
+
+<div class="container"> 
+    {% if result %}   
+    <h2 class="text-center"><u>Sentiment Analysis Result</u></h2><br>             
+    <table class="table table-dark table-striped"> 
+      <thead> 
+        <tr> 
+          <th>Tweet</th> 
+          <th>Polarity</th> 
+          <th>Sentiment</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+      {% for data in result %} 
+        <tr> 
+          <td>{{data.tweet}}</td> 
+          <td>{{data.polarity}}</td> 
+          <td>{{data.sentiment}}</td> 
+        </tr> 
+      {% endfor %} 
+      {% endif %} 
+      </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br>
+  </div>
+
+  <div>
+    {% if freq_plot_div %}
+        <h2 class="text-center"><u>Frequency of Positive/Negative/Neutral Tweets</u></h2><br>      
+        {% autoescape off %}     
+        {{freq_plot_div}}  
+        {% endautoescape %}
+        <br> 
+        <br> 
+        <br> 
+    {% endif %}
+  </div>
+
 {% endblock content %}
 

@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from .models import Predictor
+from .models import Predictor,SentimentAnalyzer
 import json
+import pandas as pd
 # Create your views here.
 
 def home_view(request):
@@ -24,7 +25,19 @@ def predict_view(request):
         return render(request,'predict.html',context=ctx)
     return render(request,'predict.html')
 
+@csrf_exempt
 def sentiment_view(request):
+    if request.method=='POST':
+        analyzer = SentimentAnalyzer()
+        tweets = analyzer.get_tweets()
+        tweets = analyzer.clean_tweets(tweets)
+        result = analyzer.get_sentiment(tweets)
+        freq_plot_div = analyzer.visualize(result)
+        result_json = result.reset_index().to_json(orient ='records') 
+        result = [] 
+        result = json.loads(result_json)
+        ctx = {'result':result,'freq_plot_div':freq_plot_div}
+        return render(request,'sentiment.html',context=ctx)
     return render(request,'sentiment.html')
 
 def summary_view(request):
