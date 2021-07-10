@@ -1,4 +1,56 @@
 {% extends "base.html" %}
 {% block content %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<h2>COVID 19 Fake News Detector</h2>
+<br>
+<div class="col-lg-10">
+    <form id="fakenews" method="POST" action="{% url 'fakenews' %}">
+        <textarea name="news" id="text" class="form-control" cols="10" rows="15" placeholder="Enter Text.." required></textarea>
+        <input type="submit" class="btn btn-primary" value="Detect Truth Value">
+    </form>
+</div> 
+{% if result %}
+<div id="predict">
+    <h4 class="text-center">Prediction : {{result}}</h4>     
+</div>
+<div id="accuracy">
+    <h4 class="text-center">Accuracy : {{accuracy}} %</h4>
+</div>
+{% endif %}
+
+
+<style id="compiled-css" type="text/css">
+ textarea {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin-bottom: 15px;
+ }
+ #fakenews {
+    width: 800px;
+    height: 25px;
+    border: none;
+    margin-left: 15px;
+    padding-top : 0;
+ }
+ #predict {
+    position: absolute;
+    left: 250px;
+    top: 460px;
+    border-style: double;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+ #accuracy {
+    position: absolute;
+    left: 450px;
+    top: 460px;
+    border-style: double;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+ </style> 
+
+
 {% endblock content %}
 

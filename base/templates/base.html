@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-inverse">
@@ -20,8 +21,8 @@
           <ul class="nav navbar-nav">
             <li ><a href="{% url 'predict' %}">Trend Predictor</a></li>
             <li ><a href="{% url 'sentiment' %}">Sentiment Analyzer</a></li>
-            <li><a href="{% url 'summary' %}">Article Summarizer</a></li>
             <li><a href="{% url 'fakenews' %}">Fake News Detector</a></li>
+            <li><a href="{% url 'summary' %}">Article Summarizer</a></li>
             <li><a href="{% url 'chatbot' %}">Covid 19 Chatbot</a></li>
           </ul>
           <form class="navbar-form navbar-left" action="/action_page.php">

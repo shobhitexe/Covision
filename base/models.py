@@ -17,6 +17,11 @@ from tweepy import Stream
 import neattext.functions as nf
 from textblob import TextBlob
 import plotly.express as px
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.svm import SVC
+from sklearn.metrics import confusion_matrix,accuracy_score
+import pickle
 # Create your models here.
 
 class Predictor():
@@ -173,3 +178,31 @@ class SentimentAnalyzer():
         fig.update_layout(title='Count of Positive/Negative/Neutral Tweets Related To Covid-19',xaxis_title='Predicted Sentiment',yaxis_title='Count')
         plot_div=plot(fig, output_type='div',include_plotlyjs=False)
         return plot_div
+
+class FakeNewsDetector():
+    def load_data(self):
+        xl_path = os.path.join(BASE_DIR,'base','datasets','fake_news.xlsx')
+        dataset = pd.read_excel(xl_path)
+        return dataset
+    
+    def detect(self,dataset,text):
+        X = dataset['text']
+        y = dataset['label']
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+        tf = TfidfVectorizer(stop_words='english',max_df=0.7)
+        X_train = tf.fit_transform(X_train)
+        X_test = tf.transform(X_test)
+        model_path = os.path.join(BASE_DIR,'base','trained_models','fakenews.pkl')
+        file = open(model_path, 'rb')     
+        classifier = pickle.load(file)
+        y_pred = classifier.predict(X_test)
+        cm = confusion_matrix(y_test, y_pred)
+        accuracy = round(accuracy_score(y_test, y_pred)*100,2)
+        result = 'True' if classifier.predict(tf.transform([text]))==[1] else 'False'
+        return cm,accuracy,result
+        return 0,0,0
+
+        
+        
+
+

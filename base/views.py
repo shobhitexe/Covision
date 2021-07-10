@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from .models import Predictor,SentimentAnalyzer
+from .models import Predictor,SentimentAnalyzer,FakeNewsDetector
 import json
 import pandas as pd
 # Create your views here.
@@ -43,7 +43,15 @@ def sentiment_view(request):
 def summary_view(request):
     return render(request,'summary.html')
 
+@csrf_exempt
 def fake_news_view(request):
+    if request.method=='POST':
+        text = request.POST.get('news')
+        detector = FakeNewsDetector()
+        dataset = detector.load_data()
+        matrix,accuracy,result = detector.detect(dataset,text)
+        ctx = {'matrix':matrix,'accuracy':accuracy,'result':result}
+        return render(request,'fakenews.html',ctx)
     return render(request,'fakenews.html')
 
 def chatbot_view(request):
