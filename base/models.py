@@ -22,6 +22,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.metrics import confusion_matrix,accuracy_score
 import pickle
+import spacy
+from spacy.lang.en.stop_words import STOP_WORDS
+from string import punctuation
+from heapq import nlargest
 # Create your models here.
 
 class Predictor():
@@ -200,9 +204,39 @@ class FakeNewsDetector():
         accuracy = round(accuracy_score(y_test, y_pred)*100,2)
         result = 'True' if classifier.predict(tf.transform([text]))==[1] else 'False'
         return cm,accuracy,result
-        return 0,0,0
-
-        
+    
+class Summarizer():
+    def summarize(self,text):
+        stopwords = list(STOP_WORDS)
+        nlp = spacy.load('en_core_web_sm')
+        doc = nlp(text)
+        tokens = [token.text for token in doc]
+        global punctuation
+        punctuation += '\n'
+        word_freq = {}
+        for word in doc:
+            if word.text.lower() not in stopwords and word.text.lower() not in punctuation:
+                if word.text not in word_freq.keys():
+                    word_freq[word.text] = 1
+                else:
+                    word_freq[word.text] += 1
+        max_freq = max(word_freq.values())
+        for word in word_freq.keys():
+            word_freq[word] /= max_freq
+        sentence_tokens = [sent for sent in doc.sents]
+        sentence_scores = {}
+        for sent in sentence_tokens:
+            for word in sent:
+                if word.text.lower() in word_freq.keys():
+                    if sent not in sentence_scores.keys():
+                        sentence_scores[sent] = word_freq[word.text.lower()]
+                    else:
+                        sentence_scores[sent] += word_freq[word.text.lower()]
+        selection_length = int(len(sentence_tokens)*0.3)
+        summary = nlargest(selection_length,sentence_scores,key=sentence_scores.get)
+        summary = [word.text for word in summary]
+        summary = ''.join(summary)
+        return summary
         
 
 

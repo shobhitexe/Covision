@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from .models import Predictor,SentimentAnalyzer,FakeNewsDetector
+from .models import Predictor,SentimentAnalyzer,FakeNewsDetector,Summarizer
 import json
 import pandas as pd
 # Create your views here.
@@ -40,7 +40,14 @@ def sentiment_view(request):
         return render(request,'sentiment.html',context=ctx)
     return render(request,'sentiment.html')
 
+@csrf_exempt
 def summary_view(request):
+    if request.method=='POST':
+        text = request.POST.get('article')
+        summarizer = Summarizer()
+        summary = summarizer.summarize(text)
+        ctx = {'article' :text, 'summary':summary,'article_count':len(text),'summary_count':len(summary)}
+        return render(request,'summary.html',ctx)
     return render(request,'summary.html')
 
 @csrf_exempt
