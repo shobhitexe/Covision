@@ -1,17 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
-
+<style>
+#rcorners1 
+{
+  border-radius: 25px;
+  border: 2px solid#88c6ff;
+  padding: 20px; 
+  width: 500px;
+  height: 200px;  
+}
+.content 
+{
+  max-width: 500px;
+  margin-left: 200px;
+  margin-top: auto;
+}
+.content1
+{
+  margin-left: 550px;
+  margin-right: auto;
+  margin-top: 100px;
+  max-width: 200px;
+}
+.content2
+{
+  margin-left: 550px;
+  margin-right: auto;
+  margin-top: 70px;
+  max-width: 200px;
+}
+</style>
 <body>
 <main role="main">
 
     <!-- START THE FEATURETTES -->
-    <div class="row featurette">
+    <div class="row featurette; content">
       <div class="col-md-5">
-        <h2 class="featurette-heading"><a href="{% url 'predict' %}">COVID 19 Trend Predictor</a> </h2>
-        <p class="lead">Predict trends in daily covid 19 cases and get an idea as to how the future situation might look</p>
+        <h3 class="featurette-heading"><u><a href="{% url 'predict' %}">COVID 19 Trend Predictor</a></u> </h3>
+        <p id="rcorners1" class="lead" style="font-size:18px">Get information on the daily reported and forecasted new covid cases for the next 30 days in India</p>
       </div>
-      <div class="col-md-5">
-        <img src="../static/images/trends.png" width="870px" height="600px">
+      <div class="col-md-5; content2">
+        <img src="../static/images/trends.png" width="200px" height="200px">
       </div>
     </div>
     
@@ -19,55 +48,57 @@
 
     <hr class="featurette-divider">
 
-    <div class="row featurette">
+    <div class="row featurette; content">
       <div class="col-md-5 order-md-2">
-        <h2 class="featurette-heading"><a href="{% url 'sentiment' %}">COVID 19 Sentiment Analyzer</a> </h2>
-        <p class="lead">Analyze the sentiments of latest tweets related to corona virus and get an idea of the current situation</p>
+        <h3 class="featurette-heading"><u><a href="{% url 'sentiment' %}">COVID 19 Sentiment Analyzer</a></u> </h3>
+        <p id="rcorners1" class="lead" style="font-size:18px">Analyze the sentiments of latest tweets related to corona virus and get an idea of the current situation</p>
       </div>
-      <div class="col-md-5 order-md-1">
-        <img src="../static/images/sentiment.png">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-5">
-        <h2 class="featurette-heading"><a href="{% url 'fakenews' %}">COVID 19 Fake News Detector</a> </h2>
-        <p class="lead">Determine the truthness of covid 19 rumors</p>
-      </div>
-      <div class="col-md-5">
-        <img src="../static/images/fake.jpg" height="500" width="700">
+      <div class="col-md-5; content1">
+        <img src="../static/images/sentiment.png" width="200px" height="200px">
       </div>
     </div>
 
     <hr class="featurette-divider">
 
-    <div class="row featurette">
+    <div class="row featurette; content">
+      <div class="col-md-5">
+        <h3 class="featurette-heading"><u><a href="{% url 'fakenews' %}">COVID 19 Fake News Detector</a></u> </h3>
+        <p id="rcorners1" class="lead" style="font-size:18px">Determine the credibility of COVID 19 news</p>
+      </div>
+      <div class="col-md-5; content2">
+        <img src="../static/images/fake.jpg" height="200" width="200">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette; content">
         <div class="col-md-5">
-          <h2 class="featurette-heading"><a href="{% url 'summary' %}">COVID 19 Article Summarizer</a> </h2>
-          <p class="lead">Summarize articles related to covid 19 to keep up with important information and not having to read unnecessary info</p>
+          <h3 class="featurette-heading"><u><a href="{% url 'summary' %}">COVID 19 Article Summarizer</a></u> </h3>
+          <p id="rcorners1" class="lead" style="font-size:18px">Summarize articles related to COVID 19 to keep up with important information and not having to read unnecessary information</p>
         </div>
-        <div class="col-md-5">
-            <img src="../static/images/summary.png" height="500" width="700">
+        <div class="col-md-5; content1">
+            <img src="../static/images/summary.png" height="200" width="200">
         </div>
       </div>
 
       <hr class="featurette-divider">
 
-    <div class="row featurette">
+    <div class="row featurette; content">
         <div class="col-md-5">
-          <h2 class="featurette-heading"><a href="{% url 'chatbot' %}">COVID 19 Chatbot</a> </h2>
-          <p class="lead">Get immediate answers to your covid 19 related queries</p>
+          <h3 class="featurette-heading"><u><a href="{% url 'chatbot' %}">COVID 19 Chatbot</a></u> </h3>
+          <p id="rcorners1" class="lead" style="font-size:18px">Get immediate answers to your COVID 19 related queries</p>
         </div>
-        <div class="col-md-5">
-            <img src="../static/images/chatbot.jpg">
+        <div class="col-md-5; content1">
+            <img src="../static/images/chatbot.jpg" height="200" width="200">
         </div>
       </div>
-
+    
     <!-- /END THE FEATURETTES -->
+    <!-- Page content -->
 
   </div><!-- /.container -->
+  
 
 
   <!-- FOOTER -->
