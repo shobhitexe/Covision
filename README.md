@@ -108,3 +108,11 @@
 * Input Field
 * Navigation Bar
 * Text Area
+## Installation
+1. Instructions to RUN the project locally
+* Download the project folder
+* Install necessary dependencies
+* In the root directory of project, type `python manage.py runserver` in command prompt
+* Django will serve the webapp at localhost and will provide the link in command prompt
+* Visit the link and explore the webapp
+
