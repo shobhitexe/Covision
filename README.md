@@ -1,6 +1,7 @@
 # Covision
 ## Description
-* Self declared deliverables 
+1. Self Declared Deliverables
+* Creating the updated covid-19 Frequently Asked Questions Dataset to train chatbot
 ## Project Components
 1. FrontEnd 
 * HTML used for structuring the webapp
