@@ -190,7 +190,7 @@ class SentimentAnalyzer():
 class FakeNewsDetector():
     def load_data(self):
         xl_path = os.path.join(BASE_DIR,'base','datasets','fake_news.xlsx')
-        dataset = pd.read_excel(xl_path)
+        dataset = pd.read_excel(xl_path, engine= 'openpyxl')
         return dataset
     
     def detect(self,dataset,text):
@@ -247,7 +247,7 @@ class Chatbot():
     def load_data(self):
        xl_path = os.path.join(BASE_DIR,'base','datasets','faq.xlsx')
        pd.set_option('max_colwidth', None)
-       dataset = pd.read_excel(xl_path)
+       dataset = pd.read_excel(xl_path, engine= 'openpyxl')
        dataset = dataset[['Context','Answer']]
        dataset = dataset.dropna()
        return dataset
