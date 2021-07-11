@@ -111,6 +111,7 @@
 ## Installation
 1. Instructions to RUN the project locally
 * Download the project folder
+* Make sure to use python 3.7 as it supports tensorflow
 * Install necessary dependencies
 * In the root directory of project, type `python manage.py runserver` in command prompt
 * Django will serve the webapp at localhost and will provide the link in command prompt
