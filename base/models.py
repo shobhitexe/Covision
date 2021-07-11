@@ -30,6 +30,8 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import tensorflow_text
 import re
+from dotenv import load_dotenv
+load_dotenv()
 # Create your models here.
 
 class Predictor():
@@ -126,10 +128,10 @@ class Listener(StreamListener):
             return False
         
 class TwitterStreamer():
-    API_KEY = '46bd35ovqNJBO5ny5xSu0IY97'
-    API_SECRET_KEY = 'm62qpyHEcFRagq1H37SdkwH8IQFZgCXYjXmKAFku2NdcIXF4vz'
-    ACCESS_TOKEN = '1413146033991733265-LqS7YwKXgRQoeDYQyNxgE0atJ52onx'
-    ACCESS_TOKEN_SECRET = 'CU1e7KlTIfbzkKtrCjzsmcwh1LqyclNPH9AVq5XFZtCY7'
+    API_KEY = os.getenv('API_KEY')
+    API_SECRET_KEY = os.getenv('API_SECRET_KEY')
+    ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+    ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
 
     def stream_tweets(self,filename,hashtags):
         listener = Listener(filename)
