@@ -3,8 +3,8 @@
 * Self declared deliverables 
 ## Project Components
 1. FrontEnd 
-* HTML used for structuring
-* CSS used for styling
+* HTML used for structuring the webapp
+* CSS used for styling the webapp
 * Javascript used for bulding a dynamic webapp
 2. BackEnd
 * Python django framework for creating the webapp
