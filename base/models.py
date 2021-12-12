@@ -259,6 +259,7 @@ class Chatbot():
             for input_sentence in input_sentences]
 
     def load_model(self,dataset):
+        os.environ['TFHUB_CACHE_DIR'] = os.path.join(BASE_DIR,'base','tf_cache')
         module = hub.load('https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/3')
         response_encodings = module.signatures['response_encoder'](
         input=tf.constant(self.preprocess_sentences(dataset.Answer)),
