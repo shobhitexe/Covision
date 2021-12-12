@@ -1,1 +1,2 @@
-tf_cache
+.env 
+/tf_cache/

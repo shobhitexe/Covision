@@ -30,8 +30,8 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import tensorflow_text
 import re
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 # Create your models here.
 
 class Predictor():
