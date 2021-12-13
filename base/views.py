@@ -1,7 +1,7 @@
 from django.http import response
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from .models import Predictor,SentimentAnalyzer,FakeNewsDetector,Summarizer,Chatbot
+from .models import Predictor,SentimentAnalyzer,FakeNewsDetector,Summarizer
 import json
 import pandas as pd
 from django.http import JsonResponse
@@ -63,18 +63,18 @@ def fake_news_view(request):
         return render(request,'fakenews.html',ctx)
     return render(request,'fakenews.html')
 
-chatbot = Chatbot()
-dataset = chatbot.load_data()
-model,response_encodings = chatbot.load_model(dataset)
+# chatbot = Chatbot()
+# dataset = chatbot.load_data()
+# model,response_encodings = chatbot.load_model(dataset)
 
 def chatbot_view(request):
-    if request.is_ajax():
-        question = request.GET.get('msg')
-        global model
-        global response_encodings
-        global chatbot
-        global dataset
-        bot_response = chatbot.get_response(model,response_encodings,question,dataset)
-        ans = {'bot_response': bot_response}
-        return JsonResponse(ans)
+    # if request.is_ajax():
+    #     question = request.GET.get('msg')
+    #     global model
+    #     global response_encodings
+    #     global chatbot
+    #     global dataset
+    #     bot_response = chatbot.get_response(model,response_encodings,question,dataset)
+    #     ans = {'bot_response': bot_response}
+    #     return JsonResponse(ans)
     return render(request,'chatbot.html')
