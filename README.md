@@ -39,8 +39,6 @@
 * importlib-metadata==4.6.1
 * Jinja2==3.0.1
 * joblib==1.0.1
-* keras-nightly==2.5.0.dev2021032900
-* Keras-Preprocessing==1.1.2
 * kiwisolver==1.3.1
 * Markdown==3.3.4
 * MarkupSafe==2.0.1
@@ -81,13 +79,6 @@
 * sqlparse==0.4.1
 * srsly==2.4.1
 * tenacity==8.0.0
-* tensorboard==2.5.0
-* tensorboard-data-server==0.6.1
-* tensorboard-plugin-wit==1.8.0
-* tensorflow==2.5.0
-* tensorflow-estimator==2.5.0
-* tensorflow-hub==0.12.0
-* tensorflow-text==2.5.0
 * termcolor==1.1.0
 * textblob==0.15.3
 * thinc==8.0.7
@@ -110,13 +101,16 @@
 * Navigation Bar
 * Text Area
 ## Installation
-1. Instructions to RUN the project locally
+1. Instructions to visit web app
+* visit link : https://covision-web.herokuapp.com/
+
+2. Instructions to RUN the project locally
 * Download the project folder
-* Make sure to use python 3.7 as it supports tensorflow
 * Install necessary dependencies
 * In the root directory of project, type `python manage.py runserver` in command prompt
 * Django will serve the webapp at localhost and will provide the link in command prompt
 * Visit the link and explore the webapp
+ 
 ## MIT License
 MIT License
 
