@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from django.contrib.staticfiles import finders
-from covision.settings import BASE_DIR
+from covision.local_settings import BASE_DIR
 import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
