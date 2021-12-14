@@ -241,36 +241,3 @@ class Summarizer():
         summary = ''.join(summary)
         return summary
         
-
-# class Chatbot():
-#     def load_data(self):
-#        xl_path = os.path.join(BASE_DIR,'base','datasets','faq.xlsx')
-#        pd.set_option('max_colwidth', None)
-#        dataset = pd.read_excel(xl_path, engine= 'openpyxl')
-#        dataset = dataset[['Context','Answer']]
-#        dataset = dataset.dropna()
-#        return dataset
-    
-#     def preprocess_sentences(self,input_sentences):
-#         return [re.sub(r'(covid-19|covid)', 'coronavirus', input_sentence, flags=re.I) 
-#             for input_sentence in input_sentences]
-
-#     def load_model(self,dataset):
-#         os.environ['TFHUB_CACHE_DIR'] = os.path.join(BASE_DIR,'base','tf_cache')
-#         module = hub.load('https://tfhub.dev/google/universal-sentence-encoder-multilingual-qa/3')
-#         response_encodings = module.signatures['response_encoder'](
-#         input=tf.constant(self.preprocess_sentences(dataset.Answer)),
-#         context=tf.constant(self.preprocess_sentences(dataset.Context)))['outputs']
-#         return module,response_encodings
-    
-#     def get_response(self,model,response_encodings,question,dataset):
-#         question_encodings = model.signatures['question_encoder'](
-#         tf.constant(self.preprocess_sentences([question])))['outputs']
-#         bot_response = dataset.Answer[np.argmax(np.inner(question_encodings, response_encodings), axis=1)]
-#         ans = bot_response.to_string()
-#         index=-1
-#         for char in ans:
-#             index+=1
-#             if char==' ':
-#                 break
-#         return ans[index:]
