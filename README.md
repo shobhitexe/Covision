@@ -102,7 +102,7 @@
 * Text Area
 ## Installation
 1. Instructions to visit web app
-* visit link : https://covision-web.herokuapp.com/
+* visit link : https://covisionweb.pythonanywhere.com/
 
 2. Instructions to RUN the project locally
 * Download the project folder
