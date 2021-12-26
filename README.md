@@ -134,10 +134,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ## Screenshots
-### Covid Trend Predictor
+### Covid 19 Trend Predictor
 ![predict](https://user-images.githubusercontent.com/73059947/125186505-51090380-e248-11eb-8abc-e46cbb35d440.jpg)
 
 
+### Covid 19 Tweet Sentiment Analyzer
+![sentiment](https://user-images.githubusercontent.com/73059947/147418228-5c51cc75-848b-4d2f-9d7a-af7267ceef6e.png)
+
+
+### Covid 19 Fake News Detector
+![fakenews](https://user-images.githubusercontent.com/73059947/147418279-4346fc83-5192-4f0c-b66d-722de3f79d9f.png)
+
+
+### Covid 19 Article Summarizer
+![summarize](https://user-images.githubusercontent.com/73059947/147418295-426b52f1-31f4-4661-878f-8f46457c8ba0.png)
+
+
 ### Covid 19 Chatbot
-![chatbot](https://user-images.githubusercontent.com/73059947/125186512-59613e80-e248-11eb-9460-b57fcf4c8f82.jpg)
+![chatbot](https://user-images.githubusercontent.com/73059947/147418238-ed9f105e-fdc6-4279-88d2-86b33336ab34.png)
 
