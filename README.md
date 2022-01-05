@@ -10,7 +10,7 @@
 * Summarizes an article in a compact manner presenting the most important information by assigning scores to sentences based on word frequencies 
 5. Covid 19 Chatbot
 * Answers queries related to covid 19 using a Universal Sentence Encoder tensorflowjs model
-## Project Components
+## Tech Stack Used
 1. FrontEnd 
 * HTML used for structuring the webapp
 * CSS used for styling the webapp
@@ -18,7 +18,7 @@
 2. BackEnd
 * Python django framework for creating the webapp
 * Javascript 
-## TechStack Used
+## Project Components
 1. Libraries
 * absl-py==0.13.0
 * asgiref==3.4.1
@@ -111,8 +111,7 @@
 * wrapt==1.12.1
 * zipp==3.5.0
 2. UI Components
-* Button
-* Carousel 
+* Button 
 * Form
 * Icon
 * Input Field
