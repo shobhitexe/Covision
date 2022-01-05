@@ -106,7 +106,7 @@
 
 2. Instructions to RUN the project locally
 * Download the project folder
-* Install necessary dependencies
+* Install necessary dependencies by typing `pip install -r requirements.txt` in command prompt in the folder containing requirements.txt file
 * In the root directory of project, type `python manage.py runserver` in command prompt
 * Django will serve the webapp at localhost and will provide the link in command prompt
 * Visit the link and explore the webapp
