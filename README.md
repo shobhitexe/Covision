@@ -1,7 +1,15 @@
 # Covision
-## Description
-1. Self Declared Deliverables
-* Creating the updated covid-19 Frequently Asked Questions Dataset to train chatbot
+## Features
+1. Covid 19 Daily Cases Trend Predictor
+* Predicts daily number of covid 19 cases in India using Linear Regression Model for next 30 days after 2021-07-06
+2. Covid 19 Tweet Sentiment Analysis 
+* Classifies sentiment of covid 19 related tweets as positive, negative or neutral using TextBlob python library
+3. Fake News Detector
+* Classifies the truth value of a sentence using Support Vector Classifier with an rbf kernel 
+4. Article Summarizer
+* Summarizes an article in a compact manner presenting the most important information by assigning scores to sentences based on word frequencies 
+5. Covid 19 Chatbot
+* Answers queries related to covid 19 using a Universal Sentence Encoder tensorflowjs model
 ## Project Components
 1. FrontEnd 
 * HTML used for structuring the webapp
@@ -34,12 +42,17 @@
 * google-auth-oauthlib==0.4.4
 * google-pasta==0.2.0
 * grpcio==1.34.1
+* gunicorn==20.1.0
 * h5py==3.1.0
 * idna==2.10
 * importlib-metadata==4.6.1
 * Jinja2==3.0.1
 * joblib==1.0.1
+* keras==2.7.0
+* keras-nightly==2.5.0.dev2021032900
+* Keras-Preprocessing==1.1.2
 * kiwisolver==1.3.1
+* libclang==12.0.0
 * Markdown==3.3.4
 * MarkupSafe==2.0.1
 * matplotlib==3.4.2
@@ -50,16 +63,19 @@
 * oauthlib==3.1.1
 * openpyxl==3.0.7
 * opt-einsum==3.3.0
-* packaging==21.0
+* packaging==21.0* 
 * pandas==1.3.0
 * pathy==0.6.0
 * Pillow==8.3.1
 * plotly==5.1.0
 * preshed==3.0.5
+* prompt-toolkit==1.0.14
 * protobuf==3.17.3
 * pyasn1==0.4.8
 * pyasn1-modules==0.2.8
 * pydantic==1.8.2
+* Pygments==2.10.0
+* PyInquirer==1.0.3
 * pyparsing==2.4.7
 * PySocks==1.7.1
 * python-dateutil==2.8.1
@@ -75,7 +91,7 @@
 * sklearn==0.0
 * smart-open==5.1.0
 * spacy==3.1.0
-* spacy-legacy==3.0.
+* spacy-legacy==3.0.8
 * sqlparse==0.4.1
 * srsly==2.4.1
 * tenacity==8.0.0
@@ -89,7 +105,9 @@
 * typing-extensions==3.7.4.3
 * urllib3==1.26.6
 * wasabi==0.8.2
+* wcwidth==0.2.5
 * Werkzeug==2.0.1
+* whitenoise==5.3.0
 * wrapt==1.12.1
 * zipp==3.5.0
 2. UI Components
