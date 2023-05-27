@@ -5,7 +5,7 @@
    <br>
    
 2. Covid-19 Live Tweet Sentiment Analysis 
-   * Classifies sentiment of covid-19 related tweets as positive, negative or neutral using TextBlob python library
+   * Classifies sentiment of covid-19 related tweets as positive, negative or neutral sentiment using TextBlob python library
    <br>
    
 3. Covid-19 Fake News Detector
