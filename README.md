@@ -9,7 +9,7 @@
    <br>
    
 3. Covid-19 Fake News Detector
-   * Classifies covid-19 news as true or false news using Support Vector Classifier with an rbf kernel 
+   * Classifies covid-19 news as true or false news using Support Vector Classifier with an RBF kernel 
    <br>
 
 4. Covid-19 Article Summarizer
