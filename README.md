@@ -93,7 +93,8 @@ SOFTWARE.
 ### Covid-19 Article Summarizer
 ![image](https://github.com/shobhitmir/Covision/assets/73059947/5e894555-fb43-4ac7-a899-aa54b7a5e90e)
 <br>
+<br>
 
 ### Covid-19 Chatbot
-![chatbot](https://user-images.githubusercontent.com/73059947/147418238-ed9f105e-fdc6-4279-88d2-86b33336ab34.png)
+![image](https://github.com/shobhitmir/Covision/assets/73059947/cdf816aa-7e17-42b3-b60a-bab97414933c)
 
