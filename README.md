@@ -79,19 +79,19 @@ SOFTWARE.
 <br>
 
 ### Covid-19 Tweet Sentiment Analysis
-![sentiment](https://user-images.githubusercontent.com/73059947/147418228-5c51cc75-848b-4d2f-9d7a-af7267ceef6e.png)
+![image](https://github.com/shobhitmir/Covision/assets/73059947/2f24d911-5b4d-4a85-a4a8-2f767d03a1b8)
 <br>
 <br>
 <br>
 
 ### Covid-19 Fake News Detector
-![fakenews](https://user-images.githubusercontent.com/73059947/147418279-4346fc83-5192-4f0c-b66d-722de3f79d9f.png)
+![image](https://github.com/shobhitmir/Covision/assets/73059947/0d89beb4-b028-4351-86f3-1821d1de9e1d)
 <br>
 <br>
 <br>
 
 ### Covid-19 Article Summarizer
-![summarize](https://user-images.githubusercontent.com/73059947/147418295-426b52f1-31f4-4661-878f-8f46457c8ba0.png)
+![image](https://github.com/shobhitmir/Covision/assets/73059947/5e894555-fb43-4ac7-a899-aa54b7a5e90e)
 <br>
 
 ### Covid-19 Chatbot
