@@ -17,7 +17,7 @@
    <br>
    
 5. Covid-19 Chatbot
-   * Answers queries related to covid-19 using a Universal Sentence Encoder tensorflowjs model
+   * Answers queries related to covid-19 using a Universal Sentence Encoder tensorflow.js model
 <br>
 
 ## Tech Stack
