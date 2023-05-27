@@ -1,132 +1,48 @@
 # Covision
 ## Features
-1. Covid 19 Daily Cases Trend Predictor
-* Predicts daily number of covid 19 cases in India using Linear Regression Model for next 30 days after 2021-07-06
-2. Covid 19 Tweet Sentiment Analysis 
-* Classifies sentiment of covid 19 related tweets as positive, negative or neutral using TextBlob python library
-3. Fake News Detector
-* Classifies the truth value of a sentence using Support Vector Classifier with an rbf kernel 
-4. Article Summarizer
-* Summarizes an article in a compact manner presenting the most important information by assigning scores to sentences based on word frequencies 
-5. Covid 19 Chatbot
-* Answers queries related to covid 19 using a Universal Sentence Encoder tensorflowjs model
-## Tech Stack Used
-1. FrontEnd 
-* HTML used for structuring the webapp
-* CSS used for styling the webapp
-* Javascript used for bulding a dynamic webapp
-2. BackEnd
-* Python django framework for creating the webapp
-* Javascript 
-## Project Components
-1. Libraries
-* absl-py==0.13.0
-* asgiref==3.4.1
-* astunparse==1.6.3
-* blis==0.7.4
-* cached-property==1.5.2
-* cachetools==4.2.2
-* catalogue==2.0.4
-* certifi==2021.5.30
-* chardet==4.0.0
-* click==7.1.2
-* colorama==0.4.4
-* cycler==0.10.0
-* cymem==2.0.5
-* Django==3.2.5
-* en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0-py3-none-any.whl
-* et-xmlfile==1.1.0
-* flatbuffers==1.12
-* gast==0.4.0
-* google-auth==1.32.1
-* google-auth-oauthlib==0.4.4
-* google-pasta==0.2.0
-* grpcio==1.34.1
-* gunicorn==20.1.0
-* h5py==3.1.0
-* idna==2.10
-* importlib-metadata==4.6.1
-* Jinja2==3.0.1
-* joblib==1.0.1
-* keras==2.7.0
-* keras-nightly==2.5.0.dev2021032900
-* Keras-Preprocessing==1.1.2
-* kiwisolver==1.3.1
-* libclang==12.0.0
-* Markdown==3.3.4
-* MarkupSafe==2.0.1
-* matplotlib==3.4.2
-* murmurhash==1.0.5
-* neattext==0.1.0
-* nltk==3.6.2
-* numpy==1.19.5
-* oauthlib==3.1.1
-* openpyxl==3.0.7
-* opt-einsum==3.3.0
-* packaging==21.0* 
-* pandas==1.3.0
-* pathy==0.6.0
-* Pillow==8.3.1
-* plotly==5.1.0
-* preshed==3.0.5
-* prompt-toolkit==1.0.14
-* protobuf==3.17.3
-* pyasn1==0.4.8
-* pyasn1-modules==0.2.8
-* pydantic==1.8.2
-* Pygments==2.10.0
-* PyInquirer==1.0.3
-* pyparsing==2.4.7
-* PySocks==1.7.1
-* python-dateutil==2.8.1
-* python-dotenv==0.18.0
-* pytz==2021.1
-* regex==2021.7.6
-* requests==2.25.1
-* requests-oauthlib==1.3.0
-* rsa==4.7.2
-* scikit-learn==0.24.2
-* scipy==1.7.0
-* six==1.15.0
-* sklearn==0.0
-* smart-open==5.1.0
-* spacy==3.1.0
-* spacy-legacy==3.0.8
-* sqlparse==0.4.1
-* srsly==2.4.1
-* tenacity==8.0.0
-* termcolor==1.1.0
-* textblob==0.15.3
-* thinc==8.0.7
-* threadpoolctl==2.2.0
-* tqdm==4.61.2
-* tweepy==3.10.0
-* typer==0.3.2
-* typing-extensions==3.7.4.3
-* urllib3==1.26.6
-* wasabi==0.8.2
-* wcwidth==0.2.5
-* Werkzeug==2.0.1
-* whitenoise==5.3.0
-* wrapt==1.12.1
-* zipp==3.5.0
-2. UI Components
-* Button 
-* Form
-* Icon
-* Input Field
-* Navigation Bar
-* Text Area
+1. Covid-19 Daily Cases Trend Predictor
+   * Predicts daily number of covid-19 cases in India using Linear Regression model
+   <br>
+   
+2. Covid-19 Live Tweet Sentiment Analysis 
+   * Classifies sentiment of covid-19 related tweets as positive, negative or neutral using TextBlob python library
+   <br>
+   
+3. Covid-19 Fake News Detector
+   * Classifies covid-19 news as true or false news using Support Vector Classifier with an rbf kernel 
+   <br>
+
+4. Covid-19 Article Summarizer
+   * Summarizes an article in a compact manner presenting the most important information by assigning scores to sentences based on word frequencies 
+   <br>
+   
+5. Covid-19 Chatbot
+   * Answers queries related to covid-19 using a Universal Sentence Encoder tensorflowjs model
+<br>
+
+## Tech Stack
+1. Front-End
+    * HTML used for structuring the web application
+    * CSS used for styling the web application
+    * Javascript used for bulding a dynamic web application
+    
+2. Back-End
+    * Python django framework used for creating the web application
+    * Javascript used for developing the chatbot
+<br>
+
 ## Installation
-1. Instructions to visit web app
-* visit link : https://covisionweb.pythonanywhere.com/
+1. Instructions to visit web application
+   * Visit link : https://covisionweb.pythonanywhere.com/
 
 2. Instructions to RUN the project locally
-* Download the project folder
-* Install necessary dependencies by typing `pip install -r requirements.txt` in command prompt in the folder containing requirements.txt file
-* In the root directory of project, type `python manage.py runserver` in command prompt
-* Django will serve the webapp at localhost and will provide the link in command prompt
-* Visit the link and explore the webapp
+   * Download the project folder
+   * Make sure to use python 3.7 as it supports tensorflow
+   * Install necessary dependencies by typing `pip install -r requirements.txt` in command prompt in the folder containing requirements.txt file
+   * In the root directory of project, type `python manage.py runserver` in command prompt
+   * Django will serve the web application on localhost and will provide the link in command prompt
+   * Visit the link and explore the web application
+<br>
  
 ## MIT License
 MIT License
@@ -150,23 +66,34 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+<br>
+<br>
+<br>
+
 ## Screenshots
-### Covid 19 Trend Predictor
+
+### Covid-19 Trend Predictor
 ![predict](https://user-images.githubusercontent.com/73059947/125186505-51090380-e248-11eb-8abc-e46cbb35d440.jpg)
+<br>
+<br>
+<br>
 
-
-### Covid 19 Tweet Sentiment Analyzer
+### Covid-19 Tweet Sentiment Analysis
 ![sentiment](https://user-images.githubusercontent.com/73059947/147418228-5c51cc75-848b-4d2f-9d7a-af7267ceef6e.png)
+<br>
+<br>
+<br>
 
-
-### Covid 19 Fake News Detector
+### Covid-19 Fake News Detector
 ![fakenews](https://user-images.githubusercontent.com/73059947/147418279-4346fc83-5192-4f0c-b66d-722de3f79d9f.png)
+<br>
+<br>
+<br>
 
-
-### Covid 19 Article Summarizer
+### Covid-19 Article Summarizer
 ![summarize](https://user-images.githubusercontent.com/73059947/147418295-426b52f1-31f4-4661-878f-8f46457c8ba0.png)
+<br>
 
-
-### Covid 19 Chatbot
+### Covid-19 Chatbot
 ![chatbot](https://user-images.githubusercontent.com/73059947/147418238-ed9f105e-fdc6-4279-88d2-86b33336ab34.png)
 
