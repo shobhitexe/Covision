@@ -76,6 +76,9 @@ SOFTWARE.
 ![predict](https://user-images.githubusercontent.com/73059947/125186505-51090380-e248-11eb-8abc-e46cbb35d440.jpg)
 <br>
 <br>
+![image](https://github.com/shobhitmir/Covision/assets/73059947/2b7cbbd2-49ef-4c42-ac7f-4f862491fb01)
+<br>
+<br>
 <br>
 
 ### Covid-19 Tweet Sentiment Analysis
