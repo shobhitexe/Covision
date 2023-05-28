@@ -1,7 +1,7 @@
 # Covision
 ## Features
 1. Covid-19 Daily Cases Trend Predictor
-   * Predicts daily number of covid-19 cases in India using Linear Regression model
+   * Predicts daily number of covid-19 cases in India using Linear Regression model for next 30 days after 2021-07-06
    <br>
    
 2. Covid-19 Live Tweet Sentiment Analysis 
