@@ -1,5 +1,5 @@
 # Covision
-Covision was developed during the 2021 doubleslash hackathon held by IEEE Jadavpur University and had achieved Top 15 position in the hackathon. Covision is a web application that assists users in predicting daily number of covid-19 cases, detecting fake covid-19 news, summarizing covid-19 articles, analyzing sentiment of real-time covid-19 tweets and solving user queries related to covid-19 via a chatbot. By providing these solutions, Covision aims to help tackle covid-19  
+Covision was developed during the 2021 doubleslash hackathon held by IEEE Jadavpur University and had achieved Top 15 position in the hackathon. Covision is a web application that assists users in predicting daily number of covid-19 cases, detecting fake covid-19 news, summarizing covid-19 articles, analyzing sentiment of real-time covid-19 tweets and solving user queries related to covid-19 via a chatbot. By providing these features, Covision aims to help tackle covid-19  
 <br>
 
 ## Features
